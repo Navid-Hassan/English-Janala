@@ -47,8 +47,8 @@ const displayLevelWord = (words, id) => {
         <p class="text-sm font-light">Meaning /Pronounciation</p>
         <p class="text-l font-semibold pt-2 hind-siliguri">"${word.meaning} / ${word.pronunciation}"</p>
         <div class="flex justify-between">
-          <div class="transition-all duration-75 hover:bg-gray-400 items-center bg-gray-100 rounded-[8px] size-[3.5rem] flex justify-center"><i class="fa-solid fa-circle-info"></i></div>
-          <div class="transition-all duration-75 hover:bg-gray-400 size-[3.5rem] bg-gray-100 rounded-[8px] flex justify-center items-center"><i class="fa-solid fa-volume-high"></i></div>
+          <div class="transition-all duration-75 hover:bg-gray-400 items-center bg-gray-100 rounded-[8px] size-[3.5rem] flex justify-center hover:cursor-pointer"><i class="fa-solid fa-circle-info"></i></div>
+          <div class="transition-all duration-75 hover:bg-gray-400 size-[3.5rem] bg-gray-100 rounded-[8px] flex justify-center items-center hover:cursor-pointer"><i class="fa-solid fa-volume-high"></i></div>
         </div>
       </div>
     `
