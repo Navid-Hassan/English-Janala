@@ -28,7 +28,7 @@ const loadLevelWord = (id) => {
 const displayLevelWord = (words, id) => {
     const wordContainer = document.getElementById("word-container");
     wordContainer.innerHTML = "";
-    if (id === 7) {
+    if (words.length === 0) {
         wordContainer.innerHTML = `
             <div class="col-span-3 space-y-3 py-10 flex flex-col items-center justify-center">
                 <img class="" src="./assets/alert-error.png" alt="">
@@ -43,9 +43,9 @@ const displayLevelWord = (words, id) => {
         const card = document.createElement("div");
         card.innerHTML = `
     <div class="bg-white p-5 text-center rounded-[12px] shadow-mid aspect-auto">
-        <h1 class="text-l font-bold">${word.word}</h1>
+        <h1 class="text-l font-bold">${word.word?word.word:"Words not found"}</h1>
         <p class="text-sm font-light">Meaning /Pronounciation</p>
-        <p class="text-l font-semibold pt-2 hind-siliguri">"${word.meaning} / ${word.pronunciation}"</p>
+        <p class="text-l font-semibold pt-2 hind-siliguri">"${word.meaning?word.meaning:"অর্থ পাওয়া যায়নি"} / ${word.pronunciation?word.pronunciation:"উচ্চারণ পাওয়া যায়নি"}"</p>
         <div class="flex justify-between">
           <div class="transition-all duration-75 hover:bg-gray-400 items-center bg-gray-100 rounded-[8px] size-[3.5rem] flex justify-center hover:cursor-pointer"><i class="fa-solid fa-circle-info"></i></div>
           <div class="transition-all duration-75 hover:bg-gray-400 size-[3.5rem] bg-gray-100 rounded-[8px] flex justify-center items-center hover:cursor-pointer"><i class="fa-solid fa-volume-high"></i></div>
